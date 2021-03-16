@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Table_const.cpp" />
     <ClCompile Include="Table_var.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +147,12 @@
     <ClInclude Include="Lexeme.h" />
     <ClInclude Include="Table_const.h" />
     <ClInclude Include="Table_var.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="alphabet.txt" />
+    <Text Include="keywords.txt" />
+    <Text Include="operators.txt" />
+    <Text Include="variable.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

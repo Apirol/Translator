@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Table_const.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -38,5 +35,19 @@
     <ClInclude Include="Lexeme.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="variable.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="alphabet.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="keywords.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="operators.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

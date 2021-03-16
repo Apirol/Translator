@@ -5,31 +5,38 @@
 
 using namespace std;
 
-struct function {
-	int argc; // Количество аргументов
-	set <pair<string, bool>> argc ; // Тип аргументов и способ их передачи
-	int type; // Возвращаемое значение (0 - есть, 1 - int)
-
-	// хз чё с этим делать, но думаю, что вот что-то подобное должно быть
-};
-
 
 class Lexeme {
 public:
-	string name; 
-	int type; //Тип идентификатор (0 - int, 1 - функция)
-	int value; // Инциализирован ли идентификатор ()
+	string name = ""; 
+	int type = 0; 
+	bool is_set = false;
+	int value; 
 
 
-	Lexeme(string id_name) {
-		name = id_name;
+	Lexeme() {
+		name = "";
 		type = 0;
 		value = false;
 	}
 
+	Lexeme(string name) {
+		this->name = name;
+		type = 0;
+		value = false;
+	}
 
-	bool operator < (const Lexeme& b) {
-		return name < b.name;
+	Lexeme(string name, int type) {
+		this->name = name;
+		this->type = type;
+		this->value = false;
+	}
+
+	Lexeme(string name, int type, int value) {
+		this->name = name;
+		this->type = type;
+		this->value = value;
+		this->is_set = true;
 	}
 
 

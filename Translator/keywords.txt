@@ -1,0 +1,5 @@
+main
+return
+const
+int
+for
