@@ -15,22 +15,25 @@ private:
     vector<Type> table;
 
 public:
-    Table_const(string filename) 
+    Table_const() { }
+
+    ~Table_const()
     {
-        ifstream fs(filename.c_str(), ios::in);
-        if (!fs.is_open())
-            throw Exception("Unable to open file " + filename);
+        table.clear();
+    }
+
+    
+    bool read(string name)
+    {
+        ifstream fs(name.c_str(), ios::in);
+        if (!fs.is_open()) return false;
         Type elem;
         while (!fs.eof())
         {
             fs >> elem;
             add(elem);
         }
-    }
-
-    ~Table_const()
-    {
-        table.clear();
+        return true;
     }
 
     inline void add(Type elem)
@@ -43,7 +46,7 @@ public:
     {
         typename vector<Type>::iterator it = find(table.begin(), table.end(), elem);
         if (it == table.end())
-            throw Exception("Element doesn't contains");
+            return false;
         return true;
     }
 
@@ -51,7 +54,7 @@ public:
     bool get_val(int num, Type& elem)
     {
         if (num < 0 || num >= table.size())
-            throw Exception("Element with this num doesn't contains");
+            return false;
         typename vector<Type>::iterator it = table.begin();
         for (int i = 0; i < num; i++)
             it++;
@@ -63,7 +66,7 @@ public:
     bool get_num(Type elem, int& num)
     {
         if (!is_contains(elem))
-            throw Exception("This element doesn't contains");
+            return false;
         
         auto it = find(table.begin(), table.end(), elem);
         num = it - table.begin();

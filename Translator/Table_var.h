@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Lexeme.h"
+#include "lexeme.h"
 #include <vector>
 
 using namespace std;

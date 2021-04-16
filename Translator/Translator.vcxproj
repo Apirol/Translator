@@ -140,13 +140,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Table_var.cpp" />
+    <ClCompile Include="table_var.cpp" />
+    <ClCompile Include="token.cpp" />
+    <ClCompile Include="translator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exception.h" />
-    <ClInclude Include="Lexeme.h" />
-    <ClInclude Include="Table_const.h" />
-    <ClInclude Include="Table_var.h" />
+    <ClInclude Include="exception.h" />
+    <ClInclude Include="lexeme.h" />
+    <ClInclude Include="table_const.h" />
+    <ClInclude Include="table_var.h" />
+    <ClInclude Include="token.h" />
+    <ClInclude Include="translator.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="alphabet.txt" />
